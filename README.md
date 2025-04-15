@@ -1,0 +1,1 @@
+Split MN-rnxfile
