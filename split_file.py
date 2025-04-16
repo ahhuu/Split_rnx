@@ -5,7 +5,7 @@ from tkinter import filedialog
 
 def extract_lines(input_file):
     output_map = {}
-    letters_to_extract = {'C', 'E', 'J'}
+    letters_to_extract = {'C', 'E', 'G', 'R', 'J'}
     header_lines = []
     output_lines = []
     found_end_of_header = False
@@ -52,7 +52,7 @@ def extract_lines(input_file):
 
     # 将输出写入文件（保留原始格式）
     for key, value in output_map.items():
-        # 根据字母替换 MN 为对应的 EN、CN、JN
+        # 根据字母替换 MN 为对应的 EN、CN、GN、RN、JN
         new_file_name = file_name.replace("MN", f"{key}N") + file_ext
         output_file = os.path.join(input_dir, new_file_name)
         with open(output_file, 'w', encoding='utf-8') as f:
